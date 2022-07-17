@@ -24,6 +24,10 @@
       color: var(--white)!important;
     }
 
+    .none{
+      display: none!important;
+    }
+
     html {
       box-sizing: border-box;
     }
@@ -55,6 +59,7 @@
 
     .rating__title{
       color: var(--white);
+      margin: 1em 0;
       font-weight: 700;
     }
 
@@ -162,7 +167,7 @@
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
-  <section class="resume">
+  <section class="resume none">
     <div class="resume__icon">
       <img src="./images/illustration-thank-you.svg" alt="">
     </div>
@@ -180,7 +185,12 @@
 
   <!-- Thank you state end -->
   <script>
-    const ratings = document.querySelectorAll('.rating__number-container__number')
+    const resume = document.querySelector('.resume');
+    const rating = document.querySelector('.rating');
+
+    const ratings = document.querySelectorAll('.rating__number-container__number');
+    const btnSubmit = document.querySelector('.rating__submit');
+    const textRating = document.querySelector('.resume__selected-number__rating');
     let selected = undefined;
 
     ratings.forEach(el => el.addEventListener('click',() => {
@@ -192,6 +202,16 @@
     const cleanActive = () => {
       ratings.forEach(el => el.classList.remove('active'));
     }
+
+    btnSubmit.addEventListener('click',() => {
+      if(selected === undefined){
+        alert('Pick a number')
+      }else{
+        textRating.textContent = selected;
+        resume.classList.remove('none');
+        rating.classList.add('none');
+      }
+    })
   </script>
 </body>
 </html>
