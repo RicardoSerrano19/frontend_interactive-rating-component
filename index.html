@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --orange: hsl(25, 97%, 53%);
+      --white: hsl(0, 0%, 100%);
+      --light-grey: hsl(217, 12%, 63%);
+      --medium-grey: hsl(216, 12%, 54%);
+      --dark-blue: hsl(213, 19%, 18%);
+      --very-dark-blue: hsl(216, 12%, 8%);
+    }
+
+    body{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Overpass';
+    }
+    .rating{
+      background-color: var(--very-dark-blue);
+      width: 50%;
+      padding: 3em 1.5em;
+      border-radius: 1em;
+    }
+
+    .rating__icon-start img{
+      background-color: var(--dark-blue);
+      border-radius: 50%;
+      padding: 0.7em;
+    }
+
+    .rating__title{
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    .rating__info{
+      color: var(--light-grey);
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .rating__number-container{
+      display: flex;
+      justify-content: space-between;
+      margin: 2em 0;
+    }
+
+    .rating__number-container__number{
+      background-color: var(--dark-blue);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      color: var(--light-grey);
+    }
+
+    .rating__submit{
+      background-color: var(--orange);
+      border: none;
+      border-radius: 2em;
+      width: 100%;
+      padding: 1em 0;
+      color: var(--white);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  <section class="rating">
+    <div class="rating__icon-start">
+      <img src="./images/icon-star.svg" alt="icon-start">
+    </div>
+    <div class="rating__title">
+      <h1>How did we do?</h1>
+    </div>
+    <div class="rating__info">
+      Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
+    </div>
+    <div class="rating__number-container">
+      <button class="rating__number-container__number">1</button>
+      <button class="rating__number-container__number">2</button>
+      <button class="rating__number-container__number">3</button>
+      <button class="rating__number-container__number">4</button>
+      <button class="rating__number-container__number">5</button>
+    </div>
+    <button class="rating__submit">Submit</button>
+  </section>
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start
+
+  You selected  Add rating here  out of 5
+
+  Thank you!
+
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!
+
+  Thank you state end -->
+
+</body>
+</html>
