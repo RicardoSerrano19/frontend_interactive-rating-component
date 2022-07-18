@@ -14,13 +14,13 @@
       --orange: hsl(25, 97%, 53%);
       --white: hsl(0, 0%, 100%);
       --light-grey: hsl(217, 12%, 63%);
-      --medium-grey: hsl(216, 12%, 54%);
+      --medium-grey: hsl(216, 12%, 24%);
       --dark-blue: hsl(213, 19%, 18%);
       --very-dark-blue: hsl(216, 12%, 8%);
     }
 
     .active{
-      background-color: var(--medium-grey)!important;
+      background-color: var(--light-grey)!important;
       color: var(--white)!important;
     }
 
@@ -44,16 +44,17 @@
       justify-content: center;
       align-items: center;
       font-family: 'Overpass';
+      background-color: var(--very-dark-blue);
     }
     .rating{
-      background-color: var(--very-dark-blue);
+      background-color: var(--dark-blue);
       width: 380px;
       padding: 3em 1.5em;
       border-radius: 1em;
     }
 
     .rating__icon-start img{
-      background-color: var(--dark-blue);
+      background-color: var(--medium-grey);
       border-radius: 50%;
       padding: 0.7em;
     }
@@ -77,7 +78,7 @@
     }
 
     .rating__number-container__number{
-      background-color: var(--dark-blue);
+      background-color: var(--medium-grey);
       border: none;
       border-radius: 50%;
       width: 50px;
